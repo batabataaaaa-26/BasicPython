@@ -4,4 +4,8 @@ text = """
 """
 
 # TODO
+word_lengths = list(map(len, text.split()))
 
+result = ''.join(map(str, word_lengths))
+
+print(result)
