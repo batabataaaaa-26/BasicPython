@@ -1,5 +1,16 @@
-a = int(input("aの値を入力: "))
-b = int(input("bの値を入力: "))
+def input_int(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+            if value <= 0:
+                print("正の整数を入力してください。")
+            else:
+                return value
+        except ValueError:
+            print("整数を入力してください。")
+
+a = input_int("aの値を入力: ")
+b = input_int("bの値を入力: ")
 
 def is_prime(n):
     if n <= 1:
